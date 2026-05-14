@@ -154,7 +154,30 @@
       align-items: center;
     }
 
-    /* APP_STORE_URL: replace href when the App Store link is available */
+    /* Official “Download on the App Store” artwork (Apple Marketing Resources). */
+    .app-store-badge {
+      display: inline-block;
+      line-height: 0;
+      text-decoration: none;
+      border-radius: 0.35rem;
+      transition: opacity 0.15s ease;
+    }
+
+    .app-store-badge:hover {
+      opacity: 0.88;
+    }
+
+    .app-store-badge:focus-visible {
+      outline: 2px solid var(--navy-soft);
+      outline-offset: 3px;
+    }
+
+    .app-store-badge img {
+      display: block;
+      height: 40px;
+      width: auto;
+    }
+
     .btn {
       display: inline-block;
       padding: 0.65rem 1.25rem;
@@ -172,12 +195,6 @@
     .btn:hover {
       background: var(--navy-soft);
       color: var(--cream);
-    }
-
-    .btn[aria-disabled="true"] {
-      opacity: 0.65;
-      cursor: not-allowed;
-      pointer-events: none;
     }
 
     .btn-secondary {
@@ -318,8 +335,9 @@
           Experience a daily fact app with zero ads and no subscriptions. 1,000+ hand-curated facts with links for deep learning. Pure knowledge, minimal design.
         </p>
         <div class="cta-row">
-          <!-- Replace href with your App Store product URL when available, then remove aria-disabled and update button text if needed. -->
-          <a class="btn" href="#" aria-disabled="true">App Store link coming soon</a>
+          <a class="app-store-badge" href="https://apps.apple.com/us/app/straight-facts-daily-trivia/id6767988129" target="_blank" rel="noopener noreferrer">
+            <img src="assets/download-on-the-app-store.svg" width="120" height="40" alt="Download on the App Store" decoding="async" />
+          </a>
           <a class="btn btn-secondary" href="mailto:skorulis@gmail.com">Contact support</a>
         </div>
       </section>
